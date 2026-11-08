@@ -54,3 +54,48 @@ h1 {
   background: #b28a50;
   margin: 15px auto;
 }
+.photo-frame {
+  width: 230px;
+  height: 300px;
+  border: 5px solid #d4b77b;
+  border-radius: 120px 120px 15px 15px;
+  overflow: hidden;
+  margin: 10px auto 20px;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-title {
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.day {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.guest-label {
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.cover h3 {
+  font-size: 18px;
+  margin: 8px 0 20px;
+}
+
+.open-button {
+  background: #806044;
+  color: white;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 30px;
+  letter-spacing: 2px;
+}
