@@ -361,3 +361,45 @@ h1 {
   z-index: 9999;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
 }
+.closing-section {
+  padding: 80px 25px;
+  background: #806044;
+  color: #fffaf2;
+  text-align: center;
+}
+
+.closing-section .section-subtitle {
+  color: #e5cc9e;
+}
+
+.closing-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: normal;
+  color: #f8e8c8;
+  margin: 20px 0;
+}
+
+.closing-message,
+.closing-prayer {
+  max-width: 340px;
+  margin: 20px auto;
+  font-size: 13px;
+  line-height: 2;
+  color: #fffaf2;
+}
+
+.closing-names {
+  font-family: 'Alex Brush', cursive;
+  font-size: 52px;
+  font-weight: normal;
+  color: #f0d49b;
+  margin: 35px 0 20px;
+}
+
+.closing-footer {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #e5cc9e;
+  margin-top: 30px;
+}
