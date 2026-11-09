@@ -346,3 +346,18 @@ h1 {
   color: #806044;
   line-height: 1.6;
 }
+#musicButton {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #d4b77b;
+  background: #806044;
+  color: #fffaf2;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
