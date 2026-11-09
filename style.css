@@ -470,12 +470,3 @@ h1 {
   border: 1px solid rgba(167, 123, 107, 0.35);
   box-shadow: 0 8px 25px rgba(80, 50, 40, 0.04);
 }
-/* GUNUNGAN WAYANG JAWA */
-.wayang-ornament {
-  width: 125px;
-  margin: 0 auto 25px;
-  color: #936c55;
-  opacity: 0;
-  transform: translateY(35px) scale(0.9);
-  transition: all 1.3s ease;
-}
