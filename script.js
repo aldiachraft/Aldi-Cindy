@@ -37,3 +37,46 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+const rsvpForm = document.getElementById("rsvpForm");
+
+if (rsvpForm) {
+  rsvpForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const nama = document.getElementById("nama").value;
+    const kehadiran = document.getElementById("kehadiran").value;
+    const jumlah = document.getElementById("jumlah").value;
+    const pesan = document.getElementById("rsvpMessage");
+    const tombol = document.getElementById("rsvpButton");
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxzf8c6EKsrHeKIqso9npgeweNHuFNObKf2ZZGKeDYV18z44TUgTOAtdbYPbF9iYk_m/exec";
+
+    tombol.disabled = true;
+    tombol.textContent = "MENGIRIM...";
+
+    fetch(scriptURL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify({
+        nama: nama,
+        kehadiran: kehadiran,
+        jumlah: jumlah
+      })
+    })
+    .then(function() {
+      pesan.textContent = "Terima kasih, konfirmasi Anda telah dikirim.";
+      rsvpForm.reset();
+    })
+    .catch(function(error) {
+      pesan.textContent = "Maaf, konfirmasi gagal dikirim. Silakan coba lagi.";
+      console.error(error);
+    })
+    .finally(function() {
+      tombol.disabled = false;
+      tombol.textContent = "KIRIM KONFIRMASI";
+    });
+  });
+}
