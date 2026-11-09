@@ -3,8 +3,16 @@ function openInvitation() {
   document.querySelector(".cover").style.display = "none";
 
   const invitation = document.getElementById("invitation");
-
   invitation.style.display = "block";
+
+  const music = document.getElementById("backgroundMusic");
+
+  if (music) {
+    music.volume = 0.5;
+    music.play().catch(function(error) {
+      console.log("Musik belum dapat diputar:", error);
+    });
+  }
 
   window.scrollTo(0, 0);
 }
