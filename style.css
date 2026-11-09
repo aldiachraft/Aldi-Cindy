@@ -263,3 +263,35 @@ h1 {
   font-size: 12px;
   letter-spacing: 2px;
 }
+.gallery-section {
+  padding: 65px 20px;
+  background: #f8f1e6;
+  text-align: center;
+}
+
+.gallery-container {
+  max-width: 500px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gallery-item {
+  height: 230px;
+  overflow: hidden;
+  border: 3px solid #d4b77b;
+  border-radius: 12px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
