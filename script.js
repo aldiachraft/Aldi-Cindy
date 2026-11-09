@@ -100,22 +100,28 @@ function toggleMusic() {
     button.textContent = "Ⅱ";
   }
 }
-/* ANIMASI SCROLL */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
+// ANIMASI SAAT SCROLL
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll(
+    ".couple-section, .location-section, .gallery-section, .rsvp-section, .closing-section"
+  );
 
-.scroll-reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+  sections.forEach(function(section) {
+    section.classList.add("scroll-reveal");
+  });
 
-@media (prefers-reduced-motion: reduce) {
-  .scroll-reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  sections.forEach(function(section) {
+    observer.observe(section);
+  });
+});
