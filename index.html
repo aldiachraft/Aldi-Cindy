@@ -175,6 +175,47 @@
   </div>
 
 </section>
+  <section class="rsvp-section">
+
+  <p class="section-subtitle">KINDLY RSVP</p>
+  <h2 class="section-title">Konfirmasi Kehadiran</h2>
+
+  <p class="rsvp-description">
+    Merupakan suatu kehormatan bagi kami
+    apabila Bapak/Ibu/Saudara/i berkenan hadir.
+    Mohon konfirmasikan kehadiran melalui formulir berikut.
+  </p>
+
+  <form id="rsvpForm">
+
+    <input
+      type="text"
+      id="nama"
+      placeholder="Nama Lengkap"
+      required
+    >
+
+    <select id="kehadiran" required>
+      <option value="">Konfirmasi Kehadiran</option>
+      <option value="Hadir">Hadir</option>
+      <option value="Tidak Hadir">Tidak Hadir</option>
+    </select>
+
+    <select id="jumlah" required>
+      <option value="">Jumlah Tamu</option>
+      <option value="1">1 Orang</option>
+      <option value="2">2 Orang</option>
+    </select>
+
+    <button type="submit" id="rsvpButton">
+      KIRIM KONFIRMASI
+    </button>
+
+    <p id="rsvpMessage"></p>
+
+  </form>
+
+</section>
 </main>
     <script src="script.js"></script>
 </body>
