@@ -88,3 +88,15 @@ if (rsvpForm) {
     });
   });
 }
+function toggleMusic() {
+  const music = document.getElementById("backgroundMusic");
+  const button = document.getElementById("musicButton");
+
+  if (music.paused) {
+    music.play();
+    button.textContent = "♫";
+  } else {
+    music.pause();
+    button.textContent = "Ⅱ";
+  }
+}
