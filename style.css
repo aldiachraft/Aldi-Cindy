@@ -207,3 +207,17 @@ h1 {
   color: #b28a50;
   margin: 15px 0;
 }
+.address-divider {
+  width: 55px;
+  height: 1px;
+  background: #d4b77b;
+  margin: 20px auto 12px;
+}
+
+.address-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #a17b4b;
+  margin-bottom: 8px;
+}
