@@ -160,3 +160,50 @@ h1 {
 .countdown-box small {
   font-size: 9px;
 }
+.couple-section {
+  padding: 65px 20px;
+  background: #f8f1e6;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #a17b4b;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  color: #806044;
+  margin: 12px 0 35px;
+}
+
+.person-card {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  border: 1px solid #d4b77b;
+  border-radius: 12px;
+  background: #fffaf2;
+  line-height: 1.8;
+}
+
+.person-card h2 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 34px;
+  color: #956d3d;
+  margin-bottom: 15px;
+}
+
+.person-card p {
+  font-size: 13px;
+  color: #624832;
+}
+
+.couple-divider {
+  font-family: 'Alex Brush', cursive;
+  font-size: 35px;
+  color: #b28a50;
+  margin: 15px 0;
+}
