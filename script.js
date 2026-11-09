@@ -125,3 +125,28 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(section);
   });
 });
+// ANIMASI SAAT SCROLL
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll(
+    ".couple-section, .location-section, .gallery-section, .rsvp-section, .closing-section"
+  );
+
+  sections.forEach(function(section) {
+    section.classList.add("scroll-reveal");
+  });
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  sections.forEach(function(section) {
+    observer.observe(section);
+  });
+});
