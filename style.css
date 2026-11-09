@@ -221,3 +221,45 @@ h1 {
   color: #a17b4b;
   margin-bottom: 8px;
 }
+.location-section {
+  padding: 65px 20px;
+  background: #f8f1e6;
+  text-align: center;
+}
+
+.location-card {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: #fffaf2;
+  border: 1px solid #d4b77b;
+  border-radius: 12px;
+  line-height: 1.8;
+}
+
+.location-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.location-card h3 {
+  color: #956d3d;
+  margin-bottom: 15px;
+}
+
+.location-card p {
+  font-size: 13px;
+  color: #624832;
+}
+
+.maps-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 25px;
+  background: #806044;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
