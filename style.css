@@ -295,3 +295,54 @@ h1 {
 .gallery-item img:hover {
   transform: scale(1.05);
 }
+.rsvp-section {
+  padding: 65px 20px;
+  background: #f8f1e6;
+  text-align: center;
+}
+
+.rsvp-description {
+  max-width: 330px;
+  margin: 0 auto 25px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #624832;
+}
+
+#rsvpForm {
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#rsvpForm input,
+#rsvpForm select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d4b77b;
+  border-radius: 8px;
+  background: #fffaf2;
+  color: #624832;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  outline: none;
+}
+
+#rsvpForm button {
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #806044;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+#rsvpMessage {
+  font-size: 13px;
+  color: #806044;
+  line-height: 1.6;
+}
