@@ -137,11 +137,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
-
-  sections.forEach(function(section) {
-    observer.observe(section);
-  });
-});
 // NAMA TAMU UNDANGAN
 const params = new URLSearchParams(window.location.search);
 const namaTamu = params.get("to");
