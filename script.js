@@ -150,3 +150,11 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(section);
   });
 });
+// NAMA TAMU UNDANGAN
+const params = new URLSearchParams(window.location.search);
+const namaTamu = params.get("to");
+const guestName = document.getElementById("guestName");
+
+if (namaTamu && guestName) {
+  guestName.textContent = namaTamu;
+}
