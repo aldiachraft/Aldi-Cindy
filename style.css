@@ -403,24 +403,43 @@ h1 {
   color: #e5cc9e;
   margin-top: 30px;
 }
-/* ANIMASI SCROLL */
-.scroll-reveal {
+/* ANIMASI ELEMEN UNDANGAN */
+
+.reveal-item {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.scroll-reveal.show {
+.from-bottom {
+  transform: translateY(65px);
+}
+
+.from-top {
+  transform: translateY(-65px);
+}
+
+.from-left {
+  transform: translateX(-65px);
+}
+
+.from-right {
+  transform: translateX(65px);
+}
+
+.reveal-item.show-item {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scroll-reveal {
+  .reveal-item {
     opacity: 1;
     transform: none;
     transition: none;
   }
+}
 }
 /* ORNAMEN PROFIL MEMPELAI */
 .couple-section {
