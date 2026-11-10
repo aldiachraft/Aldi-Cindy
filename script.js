@@ -101,50 +101,42 @@ function toggleMusic() {
   }
 }
 // ANIMASI SAAT SCROLL
+// ANIMASI ELEMEN SAAT SCROLL
 document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll(
-    ".couple-section, .location-section, .gallery-section, .rsvp-section, .closing-section"
+
+  const elements = document.querySelectorAll(
+    "h1, h2, h3, p, img, button:not(#musicButton), .gold-line"
   );
 
-  sections.forEach(function(section) {
-    section.classList.add("scroll-reveal");
+  const directions = [
+    "from-bottom",
+    "from-left",
+    "from-right",
+    "from-top"
+  ];
+
+  elements.forEach(function(element, index) {
+    element.classList.add("reveal-item");
+    element.classList.add(directions[index % 4]);
+    element.style.transitionDelay = (index % 4) * 150 + "ms";
   });
 
   const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        entry.target.classList.add("show");
+        entry.target.classList.add("show-item");
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.15
+    threshold: 0.10
   });
 
-  sections.forEach(function(section) {
-    observer.observe(section);
+  elements.forEach(function(element) {
+    observer.observe(element);
   });
+
 });
-// ANIMASI SAAT SCROLL
-document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll(
-    ".couple-section, .location-section, .gallery-section, .rsvp-section, .closing-section"
-  );
-
-  sections.forEach(function(section) {
-    section.classList.add("scroll-reveal");
-  });
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.15
-  });
 
   sections.forEach(function(section) {
     observer.observe(section);
