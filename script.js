@@ -145,3 +145,89 @@ const guestName = document.getElementById("guestName");
 if (namaTamu && guestName) {
   guestName.textContent = namaTamu;
 }
+// FITUR UCAPAN DAN DOA
+
+const wishesForm = document.getElementById("wishesForm");
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbxzf8c6EKsrHeKIqso9npgeweNHuFNObKf2ZZGKeDYV18z44TUgTOAtdbYPbF9iYk_m/exec";
+
+function loadWishes() {
+  fetch(scriptURL)
+    .then(response => response.json())
+    .then(data => {
+      const list = document.getElementById("wishesList");
+
+      if (!list) return;
+
+      if (data.length === 0) {
+        list.innerHTML = "<p>Belum ada ucapan. Jadilah yang pertama!</p>";
+        return;
+      }
+
+      list.innerHTML = "";
+
+      data.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "wish-card";
+
+        const name = document.createElement("h3");
+        name.textContent = item.nama;
+
+        const message = document.createElement("p");
+        message.textContent = item.ucapan;
+
+        card.appendChild(name);
+        card.appendChild(message);
+
+        list.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error("Gagal memuat ucapan:", error);
+    });
+}
+
+if (wishesForm) {
+  wishesForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const nama = document.getElementById("wishesName").value.trim();
+    const ucapan = document.getElementById("wishesMessage").value.trim();
+    const button = document.getElementById("wishesButton");
+    const status = document.getElementById("wishesStatus");
+
+    if (!nama || !ucapan) return;
+
+    button.disabled = true;
+    button.textContent = "MENGIRIM...";
+
+    fetch(scriptURL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify({
+        jenis: "ucapan",
+        nama: nama,
+        ucapan: ucapan
+      })
+    })
+    .then(() => {
+      status.textContent = "Terima kasih! Ucapan sedang disimpan.";
+      wishesForm.reset();
+
+      setTimeout(loadWishes, 2000);
+    })
+    .catch(error => {
+      status.textContent = "Gagal mengirim ucapan.";
+      console.error(error);
+    })
+    .finally(() => {
+      button.disabled = false;
+      button.textContent = "KIRIM UCAPAN";
+    });
+  });
+}
+
+loadWishes();
