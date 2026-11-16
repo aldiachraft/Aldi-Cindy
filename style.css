@@ -485,22 +485,30 @@ img.reveal-item.show-item {
 }
 /* UCAPAN DAN DOA */
 .wishes-section {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
   padding: 70px 20px;
   text-align: center;
-  background: #f8f3eb;
-  color: #4b3527;
+  background: #68452F;
+  color: #F5EBDD;
 }
 
 .wishes-section h2 {
   font-family: 'Alex Brush', cursive;
   font-size: 42px;
+  color: #F5EBDD;
   margin: 10px 0;
+}
+
+.wishes-section .section-subtitle {
+  color: #D8BC91;
 }
 
 .wishes-description {
   font-size: 14px;
   margin-bottom: 30px;
-  color: #806b59;
+  color: #E8D9C5;
 }
 
 #wishesForm {
@@ -515,10 +523,10 @@ img.reveal-item.show-item {
 #wishesForm textarea {
   width: 100%;
   padding: 14px;
-  border: 1px solid #d8c4a8;
+  border: 1px solid #D8BC91;
   border-radius: 10px;
-  background: #fffdf9;
-  color: #4b3527;
+  background: #F5EBDD;
+  color: #4B3527;
   font-family: inherit;
   font-size: 14px;
   box-sizing: border-box;
@@ -531,22 +539,18 @@ img.reveal-item.show-item {
 
 #wishesForm button {
   padding: 14px;
-  border: none;
+  border: 1px solid #D8BC91;
   border-radius: 30px;
-  background: #79583c;
-  color: white;
+  background: #C5A36A;
+  color: #3D2B1D;
   font-weight: bold;
-  letter-spacing: 1px;
   cursor: pointer;
-}
-
-#wishesForm button:disabled {
-  opacity: 0.6;
 }
 
 #wishesStatus {
   font-size: 13px;
   margin-bottom: 20px;
+  color: #F5EBDD;
 }
 
 .wishes-list {
@@ -560,16 +564,16 @@ img.reveal-item.show-item {
 
 .wish-card {
   padding: 20px;
-  background: #fffdf9;
-  border: 1px solid #e5d6c2;
+  background: #F5EBDD;
+  border: 1px solid #D8BC91;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(70, 45, 25, 0.06);
+  color: #4B3527;
 }
 
 .wish-card h3 {
   font-family: inherit;
   font-size: 15px;
-  color: #79583c;
+  color: #79583C;
   margin: 0 0 10px;
 }
 
